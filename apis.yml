@@ -1,7 +1,18 @@
 aid: supira-medical
 name: Supira Medical
-description: 'Supira Medical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Supira Medical, Inc. is a clinical-stage medical device company in Los
+  Gatos, California, and a portfolio company of the Shifamed medtech innovation hub.
+  It is developing a next-generation percutaneous ventricular assist device (pVAD)
+  — a catheter-based blood pump delivered through a 10 French (approximately 3.3 mm)
+  sheath — intended to provide temporary cardiovascular hemodynamic support for patients
+  undergoing high-risk percutaneous coronary intervention (HRPCI) and for patients
+  in cardiogenic shock. The system has received FDA Breakthrough Device Designation
+  and is in U.S. clinical study. The company is privately held and has raised capital
+  through Series A–E financings led by investors including Cormorant Asset Management
+  and The Capital Partnership. Supira Medical builds implantable and catheter-based
+  hardware; it does not operate a public developer program, publish machine-readable
+  API descriptions, or ship client libraries, and no public API surface was found
+  for it.'
 url: https://raw.githubusercontent.com/api-evangelist/supira-medical/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +23,13 @@ created: '2026-08-29'
 modified: '2026-08-29'
 tags:
 - Company
+- Medical Devices
+- Healthcare
+- Cardiovascular
+- Heart Pump
+- Clinical Stage
+- Medical Technology
+- Private Company
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +37,38 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/supira-medical-domain-security.yml
 - type: Website
+  url: https://supiramedical.com/
+- type: PrivacyPolicy
+  url: https://supiramedical.com/privacy-statement-us/
+- type: Press
+  url: https://supiramedical.com/category/press-releases/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/supira-medical
+- type: Listing
   url: https://forgeglobal.com/supira-medical_stock/
+- type: LLMsTxt
+  url: llms/supira-medical-llms.txt
+x-enrichment:
+  date: '2026-08-29'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Supira Medical manufactures a catheter-based percutaneous heart pump, not software —
+    no api/developer/docs/portal/status subdomain of supiramedical.com resolves in DNS at
+    all, and the marketing site (a WordPress instance behind a SiteGround sg-captcha that
+    answers HTTP 202 on every path) advertises no developer program, SDK, or integration.
+  evidence:
+  - url: https://api.supiramedical.com/
+    status: 0
+  - url: https://supiramedical.com/.well-known/api-catalog
+    status: 202
+  - url: https://supiramedical.com/
+    status: 202
+  checked: '2026-08-29'

@@ -1,0 +1,64 @@
+generated: '2026-08-29'
+method: probed
+source: live HTTPS probes of https://supiramedical.com and https://www.supiramedical.com
+note: >-
+  No /.well-known document was served. Every path on both hosts answered HTTP 202 with a
+  169-byte HTML meta-refresh shell and a `sg-captcha: challenge` response header — the
+  SiteGround bot-challenge interstitial, not a document. Per the pipeline rule a 200/202
+  returning an HTML challenge or SPA shell is a MISS, so no WellKnown or SecurityTxt
+  pointer is emitted in apis.yml. Supira Medical publishes no developer program and no
+  api/developer/docs/portal subdomain resolves in DNS, so no other host was available to
+  probe.
+hosts:
+- host: supiramedical.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 202
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 202
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 202
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 202
+    file: null
+  - path: /.well-known/api-catalog
+    status: 202
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 202
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 202
+    file: null
+  - path: /.well-known/agent.json
+    status: 202
+    file: null
+- host: www.supiramedical.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 202
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 202
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 202
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 202
+    file: null
+  - path: /.well-known/api-catalog
+    status: 202
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 202
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 202
+    file: null
+  - path: /.well-known/agent.json
+    status: 202
+    file: null
