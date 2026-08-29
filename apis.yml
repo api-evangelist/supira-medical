@@ -14,6 +14,9 @@ description: 'Supira Medical, Inc. is a clinical-stage medical device company in
   API descriptions, or ship client libraries, and no public API surface was found
   for it.'
 url: https://raw.githubusercontent.com/api-evangelist/supira-medical/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "Supira Medical builds implantable and catheter-based hardware; it does not operate a public developer program, publish machine-readable API descriptions, or ship client libraries, and no public API su"
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
